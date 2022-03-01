@@ -14,7 +14,7 @@ decodeData = b45decode(data)
 # decompressing using zlib
 decompressed = zlib.decompress(decodeData)
 # decoding message
-decoded = cbor2.loads(decompressed) # hasta aqui igual
+decoded = cbor2.loads(decompressed)
 # decode load json from message
 dictResult = cbor2.loads(decoded.value[2])
 # printing decoded message in Json format
